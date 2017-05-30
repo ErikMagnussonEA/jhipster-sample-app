@@ -12,12 +12,12 @@ pipeline {
             }
             }
     stage('Build backend') {
-        agent {
-            docker {
-                image 'maven:3-alpine'
-                args '-v $HOME/.m2:/root/.m2'
+            agent {
+                docker {
+                    image 'maven:3-alpine'
+                    args '-v $HOME/.m2:/root/.m2'
                 }
-                }
+            }
       steps {
         echo 'Helloes!'
       }
