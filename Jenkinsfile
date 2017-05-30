@@ -10,6 +10,7 @@ pipeline {
             checkout scm
             stash(name: 'ws', includes: '**') //DON'T DO THIS!
             }
+            }
     stage('Build backend') {
         agent {
             docker {
